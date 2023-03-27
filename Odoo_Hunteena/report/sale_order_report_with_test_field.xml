@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sales_report_with_text_fiels"  inherit_id="sale.report_saleorder_document">
+        <xpath expr="//span[@t-field='doc.name']" position="after">
+            <h4>
+                <t t-if="doc.test_field">
+                    Test
+                    <span t-field="doc.test_field"/>
+                </t>
+            </h4>
+        </xpath>
+    </template>
+</odoo>
